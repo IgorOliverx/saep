@@ -16,14 +16,14 @@
             <input type="hidden" name="_method" value="PUT">
 
             <label for="status" style="margin-bottom: 10px;">Status</label>
-            <select name="status" id="status" style="margin-bottom: 20px; padding: 10px; width: 100%;">
+            <select name="status" id="status" style="margin-bottom: 20px; padding: 10px; width: 100%;" required>
                 <option value="a fazer" {{ $tarefa->status == 'a fazer' ? 'selected' : '' }}>A Fazer</option>
                 <option value="fazendo" {{ $tarefa->status == 'fazendo' ? 'selected' : '' }}>Fazendo</option>
                 <option value="pronto" {{ $tarefa->status == 'pronto' ? 'selected' : '' }}>Pronto</option>
             </select>
 
             <label for="prioridade" style="margin-bottom: 10px;">Prioridade</label>
-            <select name="prioridade" id="prioridade" style="margin-bottom: 20px; padding: 10px; width: 100%;">
+            <select name="prioridade" id="prioridade" style="margin-bottom: 20px; padding: 10px; width: 100%;" required>
                 <option value="baixa" {{ $tarefa->prioridade == 'baixa' ? 'selected' : '' }}>Baixa</option>
                 <option value="media" {{ $tarefa->prioridade == 'media' ? 'selected' : '' }}>Média</option>
                 <option value="alta" {{ $tarefa->prioridade == 'alta' ? 'selected' : '' }}>Alta</option>
